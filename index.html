@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details Form</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="project-container">
+        <!-- Left Side -->
+        <div class="cards-container">
+            <!-- Card front -->
+            <div class="card-front">
+                <img src="images/bg-card-front.png" alt="front of card" class="card">
+                <div class="card-front-info">
+                    <img src="images/card-logo.svg" alt="card logo" class="logo">
+                    <p class="card-front-num">1234 5678 9123 0000</p>
+                    <div class="card-front-name-date">
+                        <p class="card-front-name">Jessie James</p>
+                        <p><span class="card-front-month">00</span>/<span class="card-front-year">00</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Back -->
+            <div class="card-back">
+                <img src="images/bg-card-back.png" alt="back of card" class="card">
+                <p class="card-back-cvc">
+                    000
+                </p>
+            </div>
+        </div>
+        <!-- Right Side -->
+        <div class="form-container">
+            <form id="cc_form" action="/">
+                <div class="form-input-wrapper">
+                    <label for="cardholder_name">cardholder name</label>
+                    <input type="text" name="cardholder_name" id="cardholder_name" placeholder="e.g. Jessie James"
+                        maxlength="35">
+                    <p id="error_chname" class="error">Something is wrong!</p>
+                </div>
+
+                <div class="form-input-wrapper">
+                    <label for="cardholder_number">card number</label>
+                    <input type="text" name="cardholder_number" id="cardholder_number"
+                        placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+                    <p id="error_chnum" class="error">Something is wrong!</p>
+                </div>
+
+                <div class="expiry-cvc-wrapper">
+                    <fieldset>
+                        <legend>exp. date (mm/yy)</legend>
+                        <div class="expiry-wrapper">
+                            <div class="form-input-wrapper">
+                                <label for="expiryMonth"></label>
+                                <input type="text" name="expiryMonth" id="expiryMonth" placeholder="MM" maxlength="2">
+                            </div>
+
+                            <div class="form-input-wrapper">
+                                <label for="expiryYear"></label>
+                                <input type="text" name="expiryYear" id="expiryYear" placeholder="YY" maxlength="2">
+                            </div>
+                        </div>
+                        <p id="error_expiry" class="error">Something is wrong!</p>
+                    </fieldset>
+
+                    <div class="cvc-wrapper">
+                        <div class="form-input-wrapper">
+                            <label for="cvc">cvc</label>
+                            <input type="text" name="cvc" id="cvc" maxlength="3" placeholder="e.g. 123">
+                            <p id="error_cvc" class="error">Something is wrong!</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="submit">
+                    Confirm
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

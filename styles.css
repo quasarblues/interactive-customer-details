@@ -1,0 +1,331 @@
+/* Simple CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --active-input-border: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --input-errors: hsl(0, 100%, 66%);
+
+    --input-border: hsl(270, 3%, 87%);
+    --input-font-color: hsl(279, 6%, 55%);
+    --btn-color: hsl(278, 68%, 11%);
+
+    --body-font-size: 18px;
+    --font-family: "Space Grotest";
+}
+
+body {
+    max-width: 1440px;
+    height: 100vh;
+    font-family: var(--font-family), sans-serif;
+    margin: 0 auto;
+}
+
+.project-container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Left Side: Cards Container */
+.cards-container {
+    min-width: 50%;
+    position: relative;
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+}
+
+.card-front,
+.card-back {
+    width: 375px;
+}
+
+.card {
+    width: 100%;
+}
+
+.logo {
+    width: 75px;
+}
+
+.card-front {
+    position: absolute;
+    top: 25%;
+    left: 32%;
+    z-index: 2;
+}
+
+.card-front-info {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+}
+
+.card-front-num {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.card-front-name-date {
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+}
+
+.card-front-name-date .card-front-name {
+    max-width: 80%;
+    word-break: break-all;
+}
+
+.card-back {
+    position: absolute;
+    top: 53%;
+    left: 40%;
+}
+
+.card-back p {
+    position: absolute;
+    top: 43%;
+    left: 80%;
+    letter-spacing: 2px;
+}
+
+
+/* Right Side: Form Container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50%;
+}
+
+form {
+    display: grid;
+    gap: 1.5rem;
+    font-size: var(--body-font-size);
+    max-width: 400px;
+}
+
+form .form-input-wrapper {
+    display: grid;
+    gap: 0.5rem;
+}
+
+form label {
+    display: block;
+    font-size: 0.675rem;
+    color: var(--btn-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+form input {
+    width: 100%;
+    padding: 0.875rem;
+    border-radius: 10px;
+    color: var(--btn-color);
+    border: 1px solid var(--input-border);
+    outline: none;
+}
+
+form input:focus {
+    border-color: var(--active-input-border);
+}
+
+form input::placeholder {
+    color: var(--input-border);
+    font-family: inherit;
+}
+
+button.submit {
+    width: 90;
+    padding: 1rem 0;
+    font-family: inherit;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--btn-color);
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+}
+
+button.submit:hover {
+    cursor: pointer;
+}
+
+button.submit:active {
+    transform: scale(0.98);
+}
+
+.expiry-cvc-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expiry-wrapper {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.expiry-wrapper input {
+    width: 90%;
+}
+
+fieldset {
+    border: none;
+    width: 50%;
+}
+
+legend {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 0.675rem;
+    color: var(--btn-color);
+    letter-spacing: 2px;
+}
+
+.error {
+    display: none;
+    color: var(--input-errors);
+    font-size: 0.75rem;
+}
+
+.show {
+    display: block;
+}
+
+/* input:has(+ p.show) {
+    border-color: var(--input-errors)
+} */
+
+/* Large Screen Sizes */
+@media screen and (max-width: 1100px) {
+    .cards-container {
+        background-size: 70% 100%;
+    }
+
+    .logo {
+        width: 65px;
+    }
+
+    .card-front,
+    .card-back {
+        width: 325px;
+    }
+
+    .card-front {
+        left: 5%;
+    }
+
+    .card-front-num {
+        font-size: 1.1rem;
+    }
+
+    .card-front-name-date {
+        width: 220px;
+        font-size: 0.625rem;
+    }
+
+    .card-back {
+        left: 15%;
+    }
+
+    .card-back div {
+        font-size: 0.825rem;
+    }
+}
+
+/* Regular smart phones */
+
+@media screen and (max-width: 800px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-container {
+        height: 30vh;
+        background-image: url(images/bg-main-mobile.png);
+        background-size: 100%;
+        border: 2px solid green;
+    }
+
+    .card-front {
+        top: 50%;
+    }
+
+    .card-back {
+        top: 10%;
+        left: 40%;
+    }
+
+    .form-container {
+        height: 70vh;
+    }
+
+}
+
+/* Small smartphones */
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 55px;
+    }
+
+    .card-front,
+    .card-back {
+        width: 275px;
+    }
+
+    .card-front {
+        left: 5%;
+        top: 52%;
+    }
+
+    .card-front-info {
+        padding: 1.5rem;
+    }
+
+    .card-front-num {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+        margin-top: 25px;
+    }
+
+    .card-front-name-date {
+        width: 220px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.625rem;
+        letter-spacing: 2px;
+    }
+
+    .card-back {
+        left: 15%;
+    }
+
+    .card-back div {
+        font-size: 0.825rem;
+    }
+
+    .form-container {
+        padding: 3rem 1rem 0;
+    }
+
+
+}
