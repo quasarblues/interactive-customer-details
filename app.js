@@ -6,6 +6,7 @@ const expiryMonthInput = document.querySelector('#expiryMonth');
 const expiryYearInput = document.querySelector('#expiryYear');
 const cvcInput = document.querySelector('#cvc');
 const formInputs = document.querySelectorAll('input');
+const thankYouEl = document.querySelector('#thank-you');
 
 // Form error messages
 const chNameErr = document.querySelector('#error_chname');
@@ -196,9 +197,14 @@ validateCVC = (e) => {
 }
 
 formEl.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // Perform validation checks
     validateName(e);
     validateCardNum(e);
     validateExpiryMonth(e);
     validateExpiryYear(e);
     validateCVC(e);
-})
+
+    formEl.style.display = 'none';
+    thankYouEl.style.display = 'flex';
+});
