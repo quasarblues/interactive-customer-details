@@ -21,21 +21,6 @@ const cardFrontExpMonth = document.querySelector('.card-front-month');
 const cardFrontExpYear = document.querySelector('.card-front-year');
 const cardBackCVC = document.querySelector('.card-back-cvc');
 
-//Adjusting Height for Mobile Keyboard on Android
-// Set the overflow property to auto
-document.documentElement.style.setProperty('overflow', 'auto');
-
-// Select the viewport meta tag
-const metaViewport = document.querySelector('meta[name=viewport]');
-
-// Define the initial height (you need to set this value)
-const initialHeight = window.innerHeight; // or any specific height you want
-
-// Update the content attribute of the viewport meta tag
-metaViewport.setAttribute('content', `height=${initialHeight}px, width=device-width, initial-scale=1.0`);
-
-
-
 
 // Display user inputs on cards
 nameInput.addEventListener('input', (e) => {
