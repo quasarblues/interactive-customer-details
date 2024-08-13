@@ -297,7 +297,6 @@ legend {
     .cards-container {
         background-image: url(images/bg-main-mobile.png);
         background-size: 100%;
-        border: 1px solid red;
     }
 
     .card-front {
