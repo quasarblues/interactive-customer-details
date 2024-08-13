@@ -280,6 +280,10 @@ legend {
 /* Regular smart phones */
 
 @media screen and (max-width: 800px) {
+    body {
+        min-height: 20rem;
+    }
+
     .project-container {
         grid-template-columns: 1fr;
     }
@@ -299,7 +303,9 @@ legend {
         left: 40%;
     }
 
-    .form-container {}
+    .form-container {
+        height: auto;
+    }
 
 }
 
