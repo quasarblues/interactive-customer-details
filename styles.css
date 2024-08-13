@@ -308,53 +308,49 @@ legend {
         left: 40%;
     }
 
-    .form-container {}
+    /* Small smartphones */
+    @media screen and (max-width: 480px) {
+        .logo {
+            width: 55px;
+        }
 
-}
+        .card-front,
+        .card-back {
+            width: 275px;
+        }
 
-/* Small smartphones */
-@media screen and (max-width: 480px) {
-    .logo {
-        width: 55px;
+        .card-front {
+            left: 5%;
+            top: 52%;
+        }
+
+        .card-front-info {
+            padding: 1.5rem;
+        }
+
+        .card-front-num {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin-top: 25px;
+        }
+
+        .card-front-name-date {
+            width: 220px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.625rem;
+            letter-spacing: 2px;
+        }
+
+        .card-back {
+            left: 15%;
+        }
+
+        .card-back p {
+            font-size: 0.825rem;
+        }
+
+        .form-container {
+            padding: 3rem 1rem 0;
+        }
     }
-
-    .card-front,
-    .card-back {
-        width: 275px;
-    }
-
-    .card-front {
-        left: 5%;
-        top: 52%;
-    }
-
-    .card-front-info {
-        padding: 1.5rem;
-    }
-
-    .card-front-num {
-        font-size: 1.1rem;
-        letter-spacing: 2px;
-        margin-top: 25px;
-    }
-
-    .card-front-name-date {
-        width: 220px;
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.625rem;
-        letter-spacing: 2px;
-    }
-
-    .card-back {
-        left: 15%;
-    }
-
-    .card-back p {
-        font-size: 0.825rem;
-    }
-
-    .form-container {
-        padding: 3rem 1rem 0;
-    }
-}
