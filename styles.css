@@ -19,12 +19,12 @@
 
 html,
 body {
-    height: 55rem;
+    height: 100%;
 }
 
 body {
     max-width: 1440px;
-    min-height: 55rem;
+    min-height: 100%;
     font-family: var(--font-family), sans-serif;
     margin: 0 auto;
 }
